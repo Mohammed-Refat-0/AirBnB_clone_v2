@@ -1,8 +1,14 @@
 <center> <h1>HBNB - The Console</h1> </center>
 
-This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
+This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, and another system of MySQL database. storage is persistent between sessions. I updated on the implemntation to include new features
 
 ---
+
+<h2> Updates: </h2>
+new delete finction in file_storage to delete objects from __objects dict. <br>
+updated prototype of "all" function in file_storage to def all(self, cls=None), which allows a optional class filtering.<br>
+
+
 
 <center><h3>Repository Contents by Project Task</h3> </center>
 
