@@ -2,7 +2,7 @@
 """ dynamic content configuration on
 server listening on 0.0.0.0, port 5000"""
 
-from flask import Flask
+from flask import Flask, render_template
 from markupsafe import escape
 
 
@@ -43,7 +43,7 @@ def number(n):
 
 
 @app.route('/number_template/<int:n>')
-def number(n):
+def number_page(n):
     """ display a html page only if n is an integer"""
     return render_template('5-number.html', n=n)
 
