@@ -8,6 +8,7 @@ from markupsafe import escape
 
 app = Flask(__name__)
 app.__strict_slashes__ = False
+app.url_map.strict_slashes = False
 
 
 @app.route('/')
@@ -28,7 +29,7 @@ def c_text(text):
     return 'C {}'.format(escape(text).replace('_', ' '))
 
 
-@app.route("/python", defaults={'text': 'is cool'})
+@app.route("/python")
 @app.route('/python/<text>')
 def python_text(text='is cool'):
     """ display “Python ” followed by the value of the text variable"""
