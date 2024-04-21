@@ -10,7 +10,7 @@ class FileStorage:
 
     def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
-        if cls == None:
+        if cls is None:
             return FileStorage.__objects
 
         obj_dict = {}
@@ -59,7 +59,11 @@ class FileStorage:
 
     def delete(self, obj=None):
         """ delete obj from __objects"""
-        if obj == None:
+        if obj is None:
             return
         del FileStorage.__objects[(obj.__class__.__name__ + '.' + obj.id)]
         FileStorage.save()
+
+    def close(self):
+        """call reload() method for deserializing the JSON file to objects"""
+        self.reload()

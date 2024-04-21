@@ -46,7 +46,7 @@ class DBStorage:
         class_list = [State, City, User, Place, Review, Amenity]
         dict = {}
 
-        if cls == None:
+        if cls is None:
             for clss in class_list:
                 results = self.__session.query(clss)
                 for result in results:
