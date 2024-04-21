@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route('/states_list')
+@app.route('/cities_by_states')
 def states_list():
     """list all states saved in a instance of dbstorage"""
     states_dict = storage.all("State")
