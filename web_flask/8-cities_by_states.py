@@ -9,7 +9,7 @@ app.url_map.strict_slashes = False
 
 
 @app.route('/cities_by_states')
-def states_list():
+def cities_by_states_list():
     """list all states saved in a instance of dbstorage"""
     states_dict = storage.all("State")
     return render_template('8-states_list.html', states=states_dict)
